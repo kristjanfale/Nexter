@@ -5,6 +5,14 @@
 
   display: flex;
   justify-content: center;
+
+  @media only screen and (max-width: $bp-1000) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+
+    align-items: center;
+    justify-content: flex-end;
+  }
 }
 
 .nav-btn {
@@ -40,5 +48,18 @@
 
   &:focus {
     outline: none;
+  }
+
+  @media only screen and (max-width: $bp-1000) {
+    margin-top: 0;
+    margin-right: 3rem;
+
+    &::before {
+      top: -1rem;
+    }
+
+    &::after {
+      top: 1rem;
+    }
   }
 }
